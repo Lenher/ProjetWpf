@@ -10,7 +10,7 @@ namespace BDDWpf
     public class Class1
     {
         SqliteConnection Connection;
-        string connectionString = "URI=file:Games.db";
+        string connectionString = "URI=file:games.db";
         SqliteCommand Command; 
 
         public bool Open()
@@ -19,7 +19,7 @@ namespace BDDWpf
             Connection.Open();
 
             Command = Connection.CreateCommand();
-            Command.CommandText = "CREATE / INSERT";
+            Command.CommandText = "CREATE TABLE IF NOT EXIST score(pseudo VARCHAR(100), score INT)";
             Command.ExecuteNonQuery();
 
 

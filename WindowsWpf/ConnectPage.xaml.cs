@@ -16,12 +16,13 @@ using System.Windows.Shapes;
 namespace WindowsWpf
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour ConnectPage.xaml
     /// </summary>
-    public partial class NavigationMainWindow : Window
+    public partial class ConnectPage : Page
     {
-        public NavigationMainWindow()
+        public ConnectPage()
         {
+            InitializeComponent();
         }
     }
 }

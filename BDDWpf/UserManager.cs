@@ -57,5 +57,25 @@ namespace BDDWpf
             return scoringBoard;
         }
 
+        public List<User> getAll()
+        {
+            List<User> allUsers = new List<User>();
+            Command = Connection.CreateCommand();
+            Command.CommandText = "SELECT pseudo, score FROM scoringBoard";
+            SqliteDataReader reader = Command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    allUsers.Add(new User(reader.GetString(0), reader.GetInt32(1)));
+                }
+            }
+
+            reader.Close();
+            Command.Dispose();
+
+            return allUsers;
+        }
+
     }
 }

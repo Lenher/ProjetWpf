@@ -16,5 +16,10 @@ namespace BDDWpf
             Pseudo = pseudo;
             Score = score;
         }
+
+        public override string ToString()
+        {
+            return Pseudo + " avec le score de " + Score;
+        }
     }
 }

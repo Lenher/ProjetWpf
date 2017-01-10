@@ -1,4 +1,4 @@
-﻿using Mono.Data.Sqlite;
+﻿using System.Data.SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,42 +7,40 @@ using System.Threading.Tasks;
 
 namespace BDDWpf
 {
-    public class UserManager
+    public static class UserManager
     {
-        public string pseudo;
-        public int score;
 
-        SqliteConnection Connection;
-        string connectionString = "URI=file:scoringBoard.db";
-        SqliteCommand Command;
+        static SQLiteConnection Connection;
+        static string connectionString = "URI=file:scoringBoard.db";
+        static SQLiteCommand Command;
 
-        public void Open()
+        public static void Open()
         {
-            Connection = new SqliteConnection(connectionString);
+            Connection = new SQLiteConnection(connectionString);
             Connection.Open();
 
             Command = Connection.CreateCommand();
-            Command.CommandText = "CREATE TABLE IF NOT EXIST score(pseudo VARCHAR(100), score INT)";
+            Command.CommandText = "CREATE TABLE IF NOT EXISTS score(pseudo VARCHAR(100), score INT)";
             Command.ExecuteNonQuery();
 
             Command.Dispose();
         }
 
-        public bool add(string pseudo, int score)
+        public static bool Add(string pseudo, int score)
         {
             Command = Connection.CreateCommand();
-            Command.CommandText = "INSERT INTO score(pseudo, score) VALUE(" + pseudo + "," + score + ")";
+            Command.CommandText = "INSERT INTO score(pseudo, score) VALUES (\"" + pseudo + "\"," + score + ")";
             int insertLines = Command.ExecuteNonQuery();
             Command.Dispose();
             return insertLines > 0;
         }
 
-        public List<User> getByScore()
+        public static List<User> GetByScore()
         {
             List<User> scoringBoard = new List<User>();
             Command = Connection.CreateCommand();
             Command.CommandText = "SELECT pseudo, score FROM scoringBoard ORDER BY score DESC LIMIT 5";
-            SqliteDataReader reader = Command.ExecuteReader();
+            SQLiteDataReader reader = Command.ExecuteReader();
             if (reader.HasRows)
             {
                 while (reader.Read())
@@ -57,12 +55,12 @@ namespace BDDWpf
             return scoringBoard;
         }
 
-        public List<User> getAll()
+        public static List<User> GetAll()
         {
             List<User> allUsers = new List<User>();
             Command = Connection.CreateCommand();
-            Command.CommandText = "SELECT pseudo, score FROM scoringBoard";
-            SqliteDataReader reader = Command.ExecuteReader();
+            Command.CommandText = "SELECT pseudo, score FROM score";
+            SQLiteDataReader reader = Command.ExecuteReader();
             if (reader.HasRows)
             {
                 while (reader.Read())
@@ -70,11 +68,18 @@ namespace BDDWpf
                     allUsers.Add(new User(reader.GetString(0), reader.GetInt32(1)));
                 }
             }
-
             reader.Close();
             Command.Dispose();
-
             return allUsers;
+        }
+
+        public static bool CleanDB()
+        {
+            Command = Connection.CreateCommand();
+            Command.CommandText = "DELETE FROM score";
+            int insertLines = Command.ExecuteNonQuery();
+            Command.Dispose();
+            return insertLines > 0;
         }
 
     }

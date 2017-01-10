@@ -1,0 +1,11 @@
+F:\B3\.Net\ProjetWPF\ProjetWpf\ProjetWpf\bin\Debug\ProjetWpf.exe.config
+F:\B3\.Net\ProjetWPF\ProjetWpf\ProjetWpf\obj\Debug\ProjetWpf.csprojResolveAssemblyReference.cache
+F:\B3\.Net\ProjetWPF\ProjetWpf\ProjetWpf\obj\Debug\ConnectPage.g.cs
+F:\B3\.Net\ProjetWPF\ProjetWpf\ProjetWpf\obj\Debug\GameEnd.g.cs
+F:\B3\.Net\ProjetWPF\ProjetWpf\ProjetWpf\obj\Debug\GamePage.g.cs
+F:\B3\.Net\ProjetWPF\ProjetWpf\ProjetWpf\obj\Debug\MainWindow.g.cs
+F:\B3\.Net\ProjetWPF\ProjetWpf\ProjetWpf\obj\Debug\Menu.g.cs
+F:\B3\.Net\ProjetWPF\ProjetWpf\ProjetWpf\obj\Debug\ScoringBoard.g.cs
+F:\B3\.Net\ProjetWPF\ProjetWpf\ProjetWpf\obj\Debug\App.g.cs
+F:\B3\.Net\ProjetWPF\ProjetWpf\ProjetWpf\obj\Debug\ProjetWpf_MarkupCompile.cache
+F:\B3\.Net\ProjetWPF\ProjetWpf\ProjetWpf\obj\Debug\ProjetWpf_MarkupCompile.lref

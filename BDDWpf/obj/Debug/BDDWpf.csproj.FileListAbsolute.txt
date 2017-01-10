@@ -1,0 +1,8 @@
+G:\C#\Projet\BDDWpf\BDDWpf\bin\Debug\BDDWpf.dll
+G:\C#\Projet\BDDWpf\BDDWpf\bin\Debug\BDDWpf.pdb
+G:\C#\Projet\BDDWpf\BDDWpf\bin\Debug\Mono.Data.Sqlite.dll
+G:\C#\Projet\BDDWpf\BDDWpf\bin\Debug\System.Data.Portable.dll
+G:\C#\Projet\BDDWpf\BDDWpf\bin\Debug\System.Transactions.Portable.dll
+G:\C#\Projet\BDDWpf\BDDWpf\obj\Debug\BDDWpf.csprojResolveAssemblyReference.cache
+G:\C#\Projet\BDDWpf\BDDWpf\obj\Debug\BDDWpf.dll
+G:\C#\Projet\BDDWpf\BDDWpf\obj\Debug\BDDWpf.pdb

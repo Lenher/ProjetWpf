@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace WindowsWpf
 {
     /// <summary>
-    /// Logique d'interaction pour GamePage.xaml
+    /// Logique d'interaction pour ScoringPage.xaml
     /// </summary>
-    public partial class GamePage : UserControl
+    public partial class ScoringPage : Page
     {
-        public GamePage()
+        public ScoringPage()
         {
             InitializeComponent();
         }

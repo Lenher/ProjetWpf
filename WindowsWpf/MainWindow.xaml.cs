@@ -18,10 +18,18 @@ namespace WindowsWpf
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
     /// </summary>
-    public partial class NavigationMainWindow : Window
+    public partial class MainWindow : Window
     {
-        public NavigationMainWindow()
+        public MainWindow()
         {
+            InitializeComponent();
+           
+        }
+
+        private void Connection_Click (object sender, RoutedEventArgs e)
+        {
+            Menu winMenu = new Menu();
+            Content = winMenu;
         }
     }
 }

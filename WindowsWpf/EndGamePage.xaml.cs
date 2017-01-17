@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace WindowsWpf
 {
     /// <summary>
-    /// Logique d'interaction pour ConnectPage.xaml
+    /// Logique d'interaction pour EndGamePage.xaml
     /// </summary>
-    public partial class ConnectPage : Page
+    public partial class EndGamePage : Page
     {
-        public ConnectPage()
+        public EndGamePage()
         {
             InitializeComponent();
         }

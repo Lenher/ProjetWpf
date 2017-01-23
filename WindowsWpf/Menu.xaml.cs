@@ -42,8 +42,7 @@ namespace WindowsWpf
 
         private void Play_Click(object sender, RoutedEventArgs e)
         {
-            Player toto = new Player("TOTO");
-            var p = new Session(toto);
+            var p = new Session(player);
             p.ChooseAFile();
         }
 

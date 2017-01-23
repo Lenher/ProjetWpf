@@ -23,13 +23,23 @@ namespace WindowsWpf
         public MainWindow()
         {
             InitializeComponent();
-           
+            Pseudo.Text = "";
         }
 
         private void Connection_Click (object sender, RoutedEventArgs e)
         {
-            Menu winMenu = new Menu();
-            Content = winMenu;
+            if (Pseudo.Text != "")
+            {
+                Menu winMenu = new Menu();
+                Content = winMenu;
+            }
+            else
+            {
+                error.Text = "Entrez un pseudo";
+            }
+            
         }
+
+
     }
 }

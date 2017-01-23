@@ -46,7 +46,7 @@
 
         <Border Grid.Column="2" Grid.Row="6" VerticalAlignment="Center" Height="50" Margin="0,16,0,-35" Grid.ColumnSpan="3" BorderThickness="0,0,0,1" BorderBrush="Black"></Border>
 
-        <Button Grid.Column="5" Grid.Row="6" VerticalAlignment="Center" Height="30" Margin="20,31,20,-30" Grid.ColumnSpan="2" Background="#5FADD1">Calculer</Button>
+        <Button Grid.Column="5" Grid.Row="6" VerticalAlignment="Center" Height="30" Margin="20,31,20,-30" Grid.ColumnSpan="2" Background="#5FADD1" Click="calculer_click">Calculer</Button>
 
 
 
@@ -54,16 +54,38 @@
 
         <Button Grid.Column="3" Grid.Row="3" Margin="10">42</Button>
 
-        <Button Grid.Column="1" Grid.Row="4" Margin="10">3</Button>
-        <Button Grid.Column="2" Grid.Row="4" Margin="10">2</Button>
-        <Button Grid.Column="3" Grid.Row="4" Margin="10">10</Button>
-        <Button Grid.Column="4" Grid.Row="4" Margin="10">7</Button>
-        <Button Grid.Column="5" Grid.Row="4" Margin="10">18</Button>
+        <Button Grid.Column="1" Grid.Row="4" Margin="10" x:Name="un" Click="un_click">
+            <TextBlock Name="txtB_un" >3</TextBlock>
+        </Button>
+        <Button Grid.Column="2" Grid.Row="4" Margin="10" x:Name="deux" Click="deux_click">
+            <TextBlock Name="txtB_deux">2</TextBlock>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="4" Margin="10" x:Name="trois" Click="trois_click">
+            <TextBlock Name="txtB_trois">10</TextBlock>
+        </Button>
+        <Button Grid.Column="4" Grid.Row="4" Margin="10" x:Name="quatre" Click="quatre_click">
+            <TextBlock Name="txtB_quatre">7</TextBlock>
+        </Button>
+        <Button Grid.Column="5" Grid.Row="4" Margin="10" x:Name="cinq" Click="cinq_click">
+            <TextBlock Name="txtB_cinq">18</TextBlock>
+        </Button>
 
-        <Button Grid.Column="1" Grid.Row="5" Margin="40,10" Grid.ColumnSpan="2">+</Button>
-        <Button Grid.Column="2" Grid.Row="5" Margin="40,10" Grid.ColumnSpan="2">-</Button>
-        <Button Grid.Column="3" Grid.Row="5" Margin="40,10" Grid.ColumnSpan="2">*</Button>
-        <Button Grid.Column="4" Grid.Row="5" Margin="40,10" Grid.ColumnSpan="2">/</Button>
+        <Button Grid.Column="1" Grid.Row="5" Margin="40,10" Grid.ColumnSpan="2" Click="plus_click">
+            <TextBlock Name="txtB_plus">+</TextBlock>
+        </Button>
+        <Button Grid.Column="2" Grid.Row="5" Margin="40,10" Grid.ColumnSpan="2" Click="moins_click">
+            <TextBlock Name="txtB_moins">-</TextBlock>
+        </Button>
+        <Button Grid.Column="3" Grid.Row="5" Margin="40,10" Grid.ColumnSpan="2" Click="multiplier_click">
+            <TextBlock Name="txtB_multiplier">*</TextBlock>
+        </Button>
+        <Button Grid.Column="4" Grid.Row="5" Margin="40,10" Grid.ColumnSpan="2" Click="diviser_click">
+            <TextBlock Name="txtB_diviser">/</TextBlock>
+        </Button>
+
+        <TextBlock Grid.Row="6" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontFamily="GeoSansLight" Height="31" Width="70" Margin="0,0,0,-30" RenderTransformOrigin="0.5,0.333" FontSize="20" x:Name="Operande_une" Grid.Column="2"/>
+        <TextBlock Grid.Row="6" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontFamily="GeoSansLight" Height="31" Width="70" Margin="0,0,0,-30" RenderTransformOrigin="0.5,0.333" FontSize="20" x:Name="Operateur" Grid.Column="3"/>
+        <TextBlock Grid.Row="6" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontFamily="GeoSansLight" Height="31" Width="70" Margin="0,0,0,-30" RenderTransformOrigin="0.5,0.333" FontSize="20" x:Name="Operande_deux" Grid.Column="4"/>
 
 
 

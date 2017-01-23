@@ -18,7 +18,7 @@ namespace WindowsWpf
     /// <summary>
     /// Logique d'interaction pour ScoringPage.xaml
     /// </summary>
-    public partial class ScoringPage : Page
+    public partial class ScoringPage : UserControl
     {
         public ScoringPage()
         {

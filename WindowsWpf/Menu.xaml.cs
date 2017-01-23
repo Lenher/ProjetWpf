@@ -18,11 +18,29 @@ namespace WindowsWpf
     /// <summary>
     /// Logique d'interaction pour Menu.xaml
     /// </summary>
-    public partial class Menu : Page
+    public partial class Menu : UserControl
     {
         public Menu()
         {
             InitializeComponent();
+        }
+
+        private void Quit_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow MainWin = new MainWindow();
+            Content = MainWin;
+        }
+
+        private void Play_Click(object sender, RoutedEventArgs e)
+        {
+            GamePage winGame = new GamePage();
+            Content = winGame;
+        }
+
+        private void Scoring_CLick(object sender, RoutedEventArgs e)
+        {
+            ScoringPage winScoring = new ScoringPage();
+            Content = winScoring;
         }
     }
 }

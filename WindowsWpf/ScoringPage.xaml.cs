@@ -16,30 +16,13 @@ using System.Windows.Shapes;
 namespace WindowsWpf
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour ScoringPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ScoringPage : UserControl
     {
-        public MainWindow()
+        public ScoringPage()
         {
             InitializeComponent();
-            Pseudo.Text = "";
         }
-
-        private void Connection_Click (object sender, RoutedEventArgs e)
-        {
-            if (Pseudo.Text != "")
-            {
-                Menu winMenu = new Menu();
-                Content = winMenu;
-            }
-            else
-            {
-                error.Text = "Entrez un pseudo";
-            }
-            
-        }
-
-
     }
 }

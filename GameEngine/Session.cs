@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace GameEngine
 {
-    class Session
+    public class Session
     {
         Player player;
         int totalScore;

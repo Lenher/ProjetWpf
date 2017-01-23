@@ -39,6 +39,7 @@ namespace WindowsWpf
                 operande += 1;
                 un.Background = Brushes.Black;
                 op1 = Convert.ToInt32(txtB_deux.Text);
+                un.IsEnabled = false;
 
             }
             else if (operande == 1)
@@ -46,6 +47,7 @@ namespace WindowsWpf
                 Operande_deux.Text = txtB_un.Text;
                 un.Background = Brushes.Black;
                 operande += 1;
+                un.IsEnabled = false;
 
 
             }
@@ -136,9 +138,32 @@ namespace WindowsWpf
             Operateur.Text = txtB_diviser.Text;
         }
 
-        private void calculer_click (object sender, RoutedEventArgs e)
+        private void calculer_click(object sender, RoutedEventArgs e)
         {
-            
+
+            if (un.IsEnabled == false)
+            {
+                un.IsEnabled = true;
+                un.Background = Brushes.LightGray;
+
+
+            }
+            else if (deux.IsEnabled == false)
+            {
+
+            }
+            else if (trois.IsEnabled == false)
+            {
+
+            }
+            else if (quatre.IsEnabled == false)
+            {
+
+            }
+            else if (cinq.IsEnabled == false)
+            {
+
+            }
         }
 
         

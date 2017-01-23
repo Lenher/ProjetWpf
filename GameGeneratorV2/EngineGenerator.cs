@@ -33,7 +33,7 @@ namespace GameGenerator
                 {                                // Test et trouve un chiffre qui va soustraire le premier résultat en étant positif
                     int3 = rnd.Next(1, 20);
                 }
-                while (resultFois - int3 < 1);
+                while (resultFois - int3 < 0);
                 resultMoins = resultFois - int3;    // Stocke le deuxième résulat
                 int4 = rnd.Next(1, 20);
                 resultPlus = resultMoins + int4;

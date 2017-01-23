@@ -14,7 +14,14 @@ namespace GameEngine
         int totalScore;
         int currentGame = 1;
         Game game;
-        int[][] numbers;
+        List<int> numbers;
+
+        public Session(Player player)
+        {
+            this.player = player;
+            this.totalScore = 0;
+            numbers = new List<int>();
+        }
 
         public void ChooseAFile()
         {
@@ -43,6 +50,11 @@ namespace GameEngine
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
+        }
+
+        public bool Play()
+        {
+            return true;
         }
     }
 }

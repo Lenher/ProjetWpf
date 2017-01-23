@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GameEngine;
+
 
 namespace WindowsWpf
 {
@@ -39,8 +41,8 @@ namespace WindowsWpf
 
         private void Scoring_CLick(object sender, RoutedEventArgs e)
         {
-            ScoringPage winScoring = new ScoringPage();
-            Content = winScoring;
+            var p = new Session();
+            p.ChooseAFile();
         }
     }
 }

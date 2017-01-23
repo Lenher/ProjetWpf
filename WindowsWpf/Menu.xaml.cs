@@ -35,14 +35,14 @@ namespace WindowsWpf
 
         private void Play_Click(object sender, RoutedEventArgs e)
         {
-            GamePage winGame = new GamePage();
-            Content = winGame;
+            Player toto = new Player("TOTO");
+            var p = new Session(toto);
+            p.ChooseAFile();
         }
 
         private void Scoring_CLick(object sender, RoutedEventArgs e)
         {
-            var p = new Session();
-            p.ChooseAFile();
+
         }
     }
 }

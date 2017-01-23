@@ -30,6 +30,7 @@ namespace WindowsWpf
         {
             if (Pseudo.Text != "")
             {
+
                 Menu winMenu = new Menu();
                 Content = winMenu;
                 

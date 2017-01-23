@@ -9,5 +9,10 @@ namespace GameEngine
     public class Player
     {
         public string Pseudo { get; set; }
+
+        public Player(string name)
+        {
+            Pseudo = name;
+        }
     }
 }

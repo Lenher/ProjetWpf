@@ -140,12 +140,30 @@ namespace WindowsWpf
 
         private void calculer_click(object sender, RoutedEventArgs e)
         {
+            int calcule = 0;
+            if(op_ == '+')
+            {
+                calcule = op1 + op2;
+            }
+            else if (op_ == '-')
+            {
+                calcule = op1 - op2;
+            }
+            else if (op_ == '*')
+            {
+                calcule = op1 * op2;
+            }
+            else if (op_ == '/')
+            {
+                calcule = op1 / op2;
+            }
+
 
             if (un.IsEnabled == false)
             {
                 un.IsEnabled = true;
                 un.Background = Brushes.LightGray;
-
+                txtB_un.Text = Convert.ToString(calcule);
 
             }
             else if (deux.IsEnabled == false)

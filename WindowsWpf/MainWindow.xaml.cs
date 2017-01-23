@@ -34,6 +34,7 @@ namespace WindowsWpf
                 Player player = new Player(Pseudo.Text);
                 Menu winMenu = new Menu(player);
                 Content = winMenu;
+                
             }
             else
             {

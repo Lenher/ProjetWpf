@@ -32,6 +32,7 @@ namespace WindowsWpf
             {
                 Menu winMenu = new Menu();
                 Content = winMenu;
+                
             }
             else
             {

@@ -42,8 +42,9 @@ namespace WindowsWpf
 
         private void Play_Click(object sender, RoutedEventArgs e)
         {
-            var p = new Session(player);
+            Session p = new Session(player);
             p.ChooseAFile();
+            test.Text = Convert.ToString(p.Numbers[0][0]);
         }
 
         private void Scoring_CLick(object sender, RoutedEventArgs e)

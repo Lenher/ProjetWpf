@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameEngine;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,7 +37,7 @@ namespace WindowsWpf
 
                 Menu winMenu = new Menu(player);
                 Content = winMenu;
-
+                
             }
             else
             {

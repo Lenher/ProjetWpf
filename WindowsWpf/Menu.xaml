@@ -32,14 +32,13 @@
         <Button Grid.Row="2"  Grid.Column="1" Margin="0,10" Background="#5FADD1"
                 x:Name="Play" Click="Play_Click">Play</Button>
 
-        <Button Grid.Row="2" Grid.Column="3"  Margin="0,10" Background="#5FADD1" Click="Scoring_Click"
-                x:Name="Scoring">Scoring Board</Button>
+        <Button Grid.Row="2" Grid.Column="3"  Margin="0,10" Background="#5FADD1"
+                x:Name="Scoring" Click="Scoring_CLick">Scoring Board</Button>
 
         <Button Grid.Row="4" Grid.Column="1" Margin="50,10" Background="#E83C24" Grid.ColumnSpan="3"
                 x:Name="Quit" Click="Quit_Click">Quit</Button>
 
-        <TextBlock Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontFamily="GeoSansLight" Height="31" Width="250" Margin="0,0,0,10" RenderTransformOrigin="0.5,0.333" FontSize="20" x:Name="test" Grid.ColumnSpan="2" Grid.Column="1"/>
-
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="test"></TextBox>
 
 
     </Grid>

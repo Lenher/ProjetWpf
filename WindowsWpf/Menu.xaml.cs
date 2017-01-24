@@ -22,7 +22,6 @@ namespace WindowsWpf
     /// </summary>
     public partial class Menu : UserControl
     {
-        
         private Player player;
         public Menu()
         {
@@ -43,14 +42,14 @@ namespace WindowsWpf
 
         private void Play_Click(object sender, RoutedEventArgs e)
         {
-            
+            var p = new Session(player);
+            p.ChooseAFile();
         }
 
         private void Scoring_CLick(object sender, RoutedEventArgs e)
         {
-            // var p = new Session(Player);
-            //test.Text = player.ToString();
-            //p.ChooseAFile();
+            GamePage gamePage = new GamePage();
+            Content = gamePage;
         }
     }
 }

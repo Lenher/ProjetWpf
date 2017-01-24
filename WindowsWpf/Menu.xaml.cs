@@ -22,9 +22,17 @@ namespace WindowsWpf
     /// </summary>
     public partial class Menu : UserControl
     {
+        
+        private Player player;
         public Menu()
         {
             InitializeComponent();
+        }
+
+        public Menu(Player player)
+        {
+            InitializeComponent();
+            this.player = player;
         }
 
         private void Quit_Click(object sender, RoutedEventArgs e)
@@ -35,14 +43,14 @@ namespace WindowsWpf
 
         private void Play_Click(object sender, RoutedEventArgs e)
         {
-            Player toto = new Player("TOTO");
-            var p = new Session(toto);
-            p.ChooseAFile();
+            
         }
 
         private void Scoring_CLick(object sender, RoutedEventArgs e)
         {
-
+            // var p = new Session(Player);
+            //test.Text = player.ToString();
+            //p.ChooseAFile();
         }
     }
 }

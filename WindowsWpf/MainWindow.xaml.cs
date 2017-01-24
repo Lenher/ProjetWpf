@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GameEngine;
 
 namespace WindowsWpf
 {
@@ -26,14 +27,16 @@ namespace WindowsWpf
             Pseudo.Text = "";
         }
 
-        private void Connection_Click (object sender, RoutedEventArgs e)
+        public void Connection_Click (object sender, RoutedEventArgs e)
         {
             if (Pseudo.Text != "")
             {
 
-                Menu winMenu = new Menu();
+                Player player = new Player(Pseudo.Text); 
+
+                Menu winMenu = new Menu(player);
                 Content = winMenu;
-                
+
             }
             else
             {

@@ -14,5 +14,10 @@ namespace GameEngine
         {
             Pseudo = name;
         }
+
+        public override string ToString()
+        {
+            return Pseudo;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameEngine;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,25 @@ namespace WindowsWpf
     /// </summary>
     public partial class GamePage : UserControl
     {
-        public GamePage()
+        private Game game;
+        private string pseudo;
+        private Player player;
+        private Session session;
+        public GamePage(Session session, Game game, Player player)
         {
+            this.session = session;
+            this.game = game;
+            this.player = player;
             InitializeComponent();
+            result.Text = Convert.ToString(game.ExpectedResult);
+            txtB_un.Text = Convert.ToString(game.Numbers[0]);
+            txtB_deux.Text = Convert.ToString(game.Numbers[1]);
+            txtB_trois.Text = Convert.ToString(game.Numbers[2]);
+            txtB_quatre.Text = Convert.ToString(game.Numbers[3]);
+            txtB_cinq.Text = Convert.ToString(game.Numbers[4]);
+            playerName.Text = player.ToString();
+            gameNumber.Text = Convert.ToString(session.CurrentGame);
+            currentScore.Text = Convert.ToString(session.TotalScore);
         }
 
         private int operande = 0;

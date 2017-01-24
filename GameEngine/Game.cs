@@ -8,18 +8,18 @@ namespace GameEngine
 {
     public class Game
     {
-        List<int> numbers;
-        int expectedResult;
-        int Score { get; set; }
-        int nbrPlus;
-        int nbrMoins;
-        int nbrDivide;
-        int nbrMulti;
+        public List<int> Numbers { get; set; }
+        public int ExpectedResult { get; set; }
+        public int Score { get; set; }
+        public int nbrPlus;
+        public int nbrMoins;
+        public int nbrDivide;
+        public int nbrMulti;
 
-        public Game(List<int> numbers, int result)
+        public Game(List<int> numbers)
         {
-            this.numbers = numbers;
-            this.expectedResult = result;
+            this.Numbers = new List<int>() { numbers[0], numbers[1], numbers[2], numbers[3], numbers[4] };
+            this.ExpectedResult = numbers[5];
             this.Score = 0;
             this.nbrPlus = 0;
             this.nbrMoins = 0;
@@ -78,7 +78,7 @@ namespace GameEngine
         public bool EndGame(int result)
         {
             bool isTerminated = false;
-            if (result == this.expectedResult)
+            if (result == this.ExpectedResult)
             {
                 UpdateScore();
                 isTerminated = true;

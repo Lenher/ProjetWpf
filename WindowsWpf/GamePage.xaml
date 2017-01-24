@@ -36,13 +36,13 @@
         <Label Grid.Column="3" Grid.Row="2"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">2'20"</Label>
 
         <Label Grid.Column="5" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">Joueur :</Label>
-        <Label Grid.Column="6" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">Titouan</Label>
+        <TextBlock Grid.Column="6" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="playerName"></TextBlock>
 
         <Label Grid.Column="5" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center">Partie :</Label>
-        <Label Grid.Column="6" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center">2 / 5</Label>
+        <TextBlock Grid.Column="6" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" x:Name="gameNumber"></TextBlock>
 
         <Label Grid.Column="5" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Center">Score :</Label>
-        <Label Grid.Column="6" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Center">8</Label>
+        <TextBlock Grid.Column="6" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Center" x:Name="currentScore"></TextBlock>
 
         <Border Grid.Column="2" Grid.Row="6" VerticalAlignment="Center" Height="50" Margin="0,16,0,-35" Grid.ColumnSpan="3" BorderThickness="0,0,0,1" BorderBrush="Black"></Border>
 
@@ -52,22 +52,24 @@
 
 
 
-        <Button Grid.Column="3" Grid.Row="3" Margin="10">42</Button>
+        <Button Grid.Column="3" Grid.Row="3" Margin="10">
+            <TextBlock Name="result" ></TextBlock>
+        </Button>
 
         <Button Grid.Column="1" Grid.Row="4" Margin="10" x:Name="un" Click="un_click">
-            <TextBlock Name="txtB_un" >3</TextBlock>
+            <TextBlock Name="txtB_un" ></TextBlock>
         </Button>
         <Button Grid.Column="2" Grid.Row="4" Margin="10" x:Name="deux" Click="deux_click">
-            <TextBlock Name="txtB_deux">2</TextBlock>
+            <TextBlock Name="txtB_deux"></TextBlock>
         </Button>
         <Button Grid.Column="3" Grid.Row="4" Margin="10" x:Name="trois" Click="trois_click">
-            <TextBlock Name="txtB_trois">10</TextBlock>
+            <TextBlock Name="txtB_trois"></TextBlock>
         </Button>
         <Button Grid.Column="4" Grid.Row="4" Margin="10" x:Name="quatre" Click="quatre_click">
-            <TextBlock Name="txtB_quatre">7</TextBlock>
+            <TextBlock Name="txtB_quatre"></TextBlock>
         </Button>
         <Button Grid.Column="5" Grid.Row="4" Margin="10" x:Name="cinq" Click="cinq_click">
-            <TextBlock Name="txtB_cinq">18</TextBlock>
+            <TextBlock Name="txtB_cinq"></TextBlock>
         </Button>
 
         <Button Grid.Column="1" Grid.Row="5" Margin="40,10" Grid.ColumnSpan="2" Click="plus_click">

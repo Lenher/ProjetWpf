@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,22 +11,21 @@ namespace GameEngine
 {
     public class Session
     {
-        Player player;
-        int totalScore;
-        int currentGame = 1;
-        Game game;
-        List<int> numbers;
+        private Player player;
+        public int TotalScore { get; set; }
+        public int CurrentGame { get; set; } = 1;
+        private Game game;
+        public List<List<int>> Numbers { get; private set; }
 
         public Session(Player player)
         {
             this.player = player;
-            this.totalScore = 0;
-            numbers = new List<int>();
+            this.TotalScore = 0;
+            Numbers = new List<List<int>>();
         }
 
         public void ChooseAFile()
         {
-            Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
             openFileDialog1.InitialDirectory = "c:\\";
@@ -37,12 +37,10 @@ namespace GameEngine
             {
                 try
                 {
-                    if ((myStream = openFileDialog1.OpenFile()) != null)
+                    JsonSerializer jSer = new JsonSerializer();
+                   using (StreamReader sReader = File.OpenText(openFileDialog1.FileName))
                     {
-                        using (myStream)
-                        {
-                            // Add to double tab numbers
-                        }
+                        this.Numbers = (List<List<int>>) jSer.Deserialize(sReader, typeof(List<List<int>>));
                     }
                 }
                 catch (Exception ex)
@@ -50,11 +48,6 @@ namespace GameEngine
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
-        }
-
-        public bool Play()
-        {
-            return true;
         }
     }
 }

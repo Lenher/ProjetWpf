@@ -42,14 +42,16 @@ namespace WindowsWpf
 
         private void Play_Click(object sender, RoutedEventArgs e)
         {
-            var p = new Session(player);
-            p.ChooseAFile();
+            Session session = new Session(player);
+            session.ChooseAFile();
+            List<int> bleh = session.Numbers[0];
+            Game game = new Game(bleh);
+            GamePage gamePage = new GamePage(session, game, player);
+            Content = gamePage;
         }
 
         private void Scoring_CLick(object sender, RoutedEventArgs e)
         {
-            GamePage gamePage = new GamePage();
-            Content = gamePage;
         }
     }
 }

@@ -12,15 +12,15 @@ namespace GameEngine
     public class Session
     {
         private Player player;
-        private int totalScore;
-        private int currentGame = 1;
+        public int TotalScore { get; set; }
+        public int CurrentGame { get; set; } = 1;
         private Game game;
         public List<List<int>> Numbers { get; private set; }
 
         public Session(Player player)
         {
             this.player = player;
-            this.totalScore = 0;
+            this.TotalScore = 0;
             Numbers = new List<List<int>>();
         }
 
@@ -48,11 +48,6 @@ namespace GameEngine
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
-        }
-
-        public bool Play()
-        {
-            return true;
         }
     }
 }

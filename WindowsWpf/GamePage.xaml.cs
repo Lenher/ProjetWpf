@@ -54,15 +54,14 @@ namespace WindowsWpf
             {
                 Operande_une.Text = txtB_un.Text;
                 operande += 1;
-                un.Background = Brushes.Black;
-                op1 = Convert.ToInt32(txtB_deux.Text);
+                op1 = Convert.ToInt32(txtB_un.Text);
                 un.IsEnabled = false;
 
             }
             else if (operande == 1)
             {
                 Operande_deux.Text = txtB_un.Text;
-                un.Background = Brushes.Black;
+                op2 = Convert.ToInt32(txtB_un.Text);
                 operande += 1;
                 un.IsEnabled = false;
 
@@ -75,14 +74,17 @@ namespace WindowsWpf
             if (operande == 0)
             {
                 Operande_une.Text = txtB_deux.Text;
+                op1 = Convert.ToInt32(txtB_deux.Text);
                 operande += 1;
-                deux.Background = Brushes.Black;
+                deux.IsEnabled = false;
             }
             else if (operande == 1)
             {
                 Operande_deux.Text = txtB_deux.Text;
+                op2 = Convert.ToInt32(txtB_deux.Text);
                 operande += 1;
-                deux.Background = Brushes.Black;
+                deux.IsEnabled = false;
+
             }
         }
 
@@ -91,14 +93,17 @@ namespace WindowsWpf
             if (operande == 0)
             {
                 Operande_une.Text = txtB_trois.Text;
+                op1 = Convert.ToInt32(txtB_trois.Text);
                 operande += 1;
-                trois.Background = Brushes.Black;
+                trois.IsEnabled = false;
+
             }
             else if (operande == 1)
             {
                 Operande_deux.Text = txtB_trois.Text;
+                op2 = Convert.ToInt32(txtB_trois.Text);
                 operande += 1;
-                trois.Background = Brushes.Black;
+                trois.IsEnabled = false;
             }
         }
 
@@ -107,15 +112,16 @@ namespace WindowsWpf
             if (operande == 0)
             {
                 Operande_une.Text = txtB_quatre.Text;
+                op1 = Convert.ToInt32(txtB_quatre.Text);
                 operande += 1;
-                quatre.Background = Brushes.Black;
+                quatre.IsEnabled = false;
             }
             else if (operande == 1)
             {
                 Operande_deux.Text = txtB_quatre.Text;
+                op2 = Convert.ToInt32(txtB_quatre.Text);
                 operande += 1;
-                quatre.Background = Brushes.Black;
-
+                quatre.IsEnabled = false;
             }
         }
 
@@ -124,39 +130,50 @@ namespace WindowsWpf
             if (operande == 0)
             {
                 Operande_une.Text = txtB_cinq.Text;
+                op1 = Convert.ToInt32(txtB_cinq.Text);
                 operande += 1;
-                cinq.Background = Brushes.Black;
+                cinq.IsEnabled = false;
+
             }
             else if (operande == 1)
             {
                 Operande_deux.Text = txtB_cinq.Text;
+                op2 = Convert.ToInt32(txtB_cinq.Text);
                 operande += 1;
-                cinq.Background = Brushes.Black;
+                cinq.IsEnabled = false;
+
             }
         }
 
         private void  plus_click(object sender, RoutedEventArgs e)
         {
             Operateur.Text = txtB_plus.Text;
+            op_ = '+';
         }
 
         private void moins_click(object sender, RoutedEventArgs e)
         {
             Operateur.Text = txtB_moins.Text;
+            op_ = '-';
         }
 
         private void multiplier_click(object sender, RoutedEventArgs e)
         {
             Operateur.Text = txtB_multiplier.Text;
+            op_ = '*';
         }
 
         private void diviser_click(object sender, RoutedEventArgs e)
         {
             Operateur.Text = txtB_diviser.Text;
+            op_ = '/';
         }
 
         private void calculer_click(object sender, RoutedEventArgs e)
         {
+            operande = 0;
+
+
             int calcule = 0;
             if(op_ == '+')
             {
@@ -175,30 +192,36 @@ namespace WindowsWpf
                 calcule = op1 / op2;
             }
 
-
             if (un.IsEnabled == false)
             {
                 un.IsEnabled = true;
-                un.Background = Brushes.LightGray;
                 txtB_un.Text = Convert.ToString(calcule);
 
             }
             else if (deux.IsEnabled == false)
             {
-
+                deux.IsEnabled = true;
+                txtB_deux.Text = Convert.ToString(calcule);
             }
             else if (trois.IsEnabled == false)
             {
-
+                trois.IsEnabled = true;
+                txtB_trois.Text = Convert.ToString(calcule);
             }
             else if (quatre.IsEnabled == false)
             {
-
+                quatre.IsEnabled = true;
+                txtB_quatre.Text = Convert.ToString(calcule);
             }
             else if (cinq.IsEnabled == false)
             {
-
+                cinq.IsEnabled = true;
+                txtB_cinq.Text = Convert.ToString(calcule);
             }
+
+            Operande_une.Text = "";
+            Operande_deux.Text = "";
+            Operateur.Text = "";
         }
 
         

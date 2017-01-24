@@ -35,7 +35,7 @@ namespace GameEngine
                     result =  number1+number2;
                     nbrPlus++;
                     break;
-                case 'x':
+                case '*':
                     result = number1 * number2;
                     nbrMulti++;
                     break;

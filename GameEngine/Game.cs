@@ -52,7 +52,7 @@ namespace GameEngine
                     {
                         break;
                     }
-                    result = number1 - number2;
+                    result = number1 / number2;
                     nbrDivide++;
                     break;
             }
@@ -75,7 +75,7 @@ namespace GameEngine
             nbrPlus = 0;
         }
 
-        public bool EndGame(int result)
+        public bool hasWin(int result)
         {
             bool isTerminated = false;
             if (result == this.ExpectedResult)

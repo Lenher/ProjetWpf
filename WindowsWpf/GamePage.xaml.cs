@@ -27,12 +27,12 @@ namespace WindowsWpf
 
         private int op1;
         private int op2;
-        private char op_;
-
-        private bool isFirst;
+        private char operateur;
 
         private int posFirst = -1;
         private int posSecond = -1;
+
+        private int nbrOperation = 0;
 
 
         public GamePage(Session session, Game game, Player player)
@@ -48,7 +48,7 @@ namespace WindowsWpf
             txtB_quatre.Text = Convert.ToString(game.Numbers[3]);
             txtB_cinq.Text = Convert.ToString(game.Numbers[4]);
             playerName.Text = player.ToString();
-            gameNumber.Text = Convert.ToString(session.CurrentGame);
+            gameNumber.Text = Convert.ToString(session.GamePlayed);
             currentScore.Text = Convert.ToString(session.TotalScore);
         } 
 
@@ -68,9 +68,9 @@ namespace WindowsWpf
                         // Get position of click
                         posFirst = thisCase;
                         // Stock for calculation
-                        op1 = game.Numbers[thisCase];
+                        op1 = Convert.ToInt32(txtB_un.Text);
                         // Write in operation to calculate
-                        Operande_une.Text = Convert.ToString(game.Numbers[thisCase]);
+                        Operande_une.Text = txtB_un.Text;
                     }
                     else
                     {
@@ -95,18 +95,18 @@ namespace WindowsWpf
                         {
                             // Get position of click
                             posSecond = thisCase;
-                            Operande_deux.Text = Convert.ToString(game.Numbers[thisCase]);
-                            // Stock for calculation
-                            op2 = game.Numbers[thisCase];
+                            op2 = Convert.ToInt32(txtB_un.Text);
+                            // Write in operation to calculate
+                            Operande_deux.Text = txtB_un.Text;
                         }
                         // Case with second selected but not the first
                         else if (posFirst == -1  && posSecond >= 0)
                         {
                             // Get position of click
                             posFirst = thisCase;
-                            Operande_une.Text = Convert.ToString(game.Numbers[thisCase]);
-                            // Stock for calculation
-                            op1 = game.Numbers[thisCase];
+                            op1 = Convert.ToInt32(txtB_un.Text);
+                            // Write in operation to calculate
+                            Operande_une.Text = txtB_un.Text;
                         }
                         // Case with both numbers are already selected
                         else
@@ -127,9 +127,9 @@ namespace WindowsWpf
                         // Get position of click
                         posFirst = thisCase;
                         // Stock for calculation
-                        op1 = game.Numbers[thisCase];
+                        op1 = Convert.ToInt32(txtB_deux.Text);
                         // Write in operation to calculate
-                        Operande_une.Text = Convert.ToString(game.Numbers[thisCase]);
+                        Operande_une.Text = txtB_deux.Text;
                     }
                     else
                     {
@@ -154,18 +154,18 @@ namespace WindowsWpf
                         {
                             // Get position of click
                             posSecond = thisCase;
-                            Operande_deux.Text = Convert.ToString(game.Numbers[thisCase]);
-                            // Stock for calculation
-                            op2 = game.Numbers[thisCase];
+                            op2 = Convert.ToInt32(txtB_deux.Text);
+                            // Write in operation to calculate
+                            Operande_deux.Text = txtB_deux.Text;
                         }
                         // Case with second selected but not the first
                         else if (posFirst == -1 && posSecond >= 0)
                         {
                             // Get position of click
                             posFirst = thisCase;
-                            Operande_une.Text = Convert.ToString(game.Numbers[thisCase]);
-                            // Stock for calculation
-                            op1 = game.Numbers[thisCase];
+                            op1 = Convert.ToInt32(txtB_deux.Text);
+                            // Write in operation to calculate
+                            Operande_une.Text = txtB_deux.Text;
                         }
                         // Case with both numbers are already selected
                         else
@@ -186,9 +186,9 @@ namespace WindowsWpf
                         // Get position of click
                         posFirst = thisCase;
                         // Stock for calculation
-                        op1 = game.Numbers[thisCase];
+                        op1 = Convert.ToInt32(txtB_trois.Text);
                         // Write in operation to calculate
-                        Operande_une.Text = Convert.ToString(game.Numbers[thisCase]);
+                        Operande_une.Text = txtB_trois.Text;
                     }
                     else
                     {
@@ -213,18 +213,20 @@ namespace WindowsWpf
                         {
                             // Get position of click
                             posSecond = thisCase;
-                            Operande_deux.Text = Convert.ToString(game.Numbers[thisCase]);
                             // Stock for calculation
-                            op2 = game.Numbers[thisCase];
+                            op2 = Convert.ToInt32(txtB_trois.Text);
+                            // Write in operation to calculate
+                            Operande_deux.Text = txtB_trois.Text;
                         }
                         // Case with second selected but not the first
                         else if (posFirst == -1 && posSecond >= 0)
                         {
                             // Get position of click
                             posFirst = thisCase;
-                            Operande_une.Text = Convert.ToString(game.Numbers[thisCase]);
                             // Stock for calculation
-                            op1 = game.Numbers[thisCase];
+                            op1 = Convert.ToInt32(txtB_trois.Text);
+                            // Write in operation to calculate
+                            Operande_une.Text = txtB_trois.Text;
                         }
                         // Case with both numbers are already selected
                         else
@@ -245,9 +247,9 @@ namespace WindowsWpf
                         // Get position of click
                         posFirst = thisCase;
                         // Stock for calculation
-                        op1 = game.Numbers[thisCase];
+                        op1 = Convert.ToInt32(txtB_quatre.Text);
                         // Write in operation to calculate
-                        Operande_une.Text = Convert.ToString(game.Numbers[thisCase]);
+                        Operande_une.Text = txtB_quatre.Text;
                     }
                     else
                     {
@@ -272,18 +274,20 @@ namespace WindowsWpf
                         {
                             // Get position of click
                             posSecond = thisCase;
-                            Operande_deux.Text = Convert.ToString(game.Numbers[thisCase]);
                             // Stock for calculation
-                            op2 = game.Numbers[thisCase];
+                            op2 = Convert.ToInt32(txtB_quatre.Text);
+                            // Write in operation to calculate
+                            Operande_deux.Text = txtB_quatre.Text;
                         }
                         // Case with second selected but not the first
                         else if (posFirst == -1 && posSecond >= 0)
                         {
                             // Get position of click
                             posFirst = thisCase;
-                            Operande_une.Text = Convert.ToString(game.Numbers[thisCase]);
                             // Stock for calculation
-                            op1 = game.Numbers[thisCase];
+                            op1 = Convert.ToInt32(txtB_quatre.Text);
+                            // Write in operation to calculate
+                            Operande_une.Text = txtB_quatre.Text;
                         }
                         // Case with both numbers are already selected
                         else
@@ -304,9 +308,9 @@ namespace WindowsWpf
                         // Get position of click
                         posFirst = thisCase;
                         // Stock for calculation
-                        op1 = game.Numbers[thisCase];
+                        op1 = Convert.ToInt32(txtB_cinq.Text);
                         // Write in operation to calculate
-                        Operande_une.Text = Convert.ToString(game.Numbers[thisCase]);
+                        Operande_une.Text = txtB_cinq.Text;
                     }
                     else
                     {
@@ -331,18 +335,20 @@ namespace WindowsWpf
                         {
                             // Get position of click
                             posSecond = thisCase;
-                            Operande_deux.Text = Convert.ToString(game.Numbers[thisCase]);
                             // Stock for calculation
-                            op2 = game.Numbers[thisCase];
+                            op2 = Convert.ToInt32(txtB_cinq.Text);
+                            // Write in operation to calculate
+                            Operande_deux.Text = txtB_cinq.Text;
                         }
                         // Case with second selected but not the first
                         else if (posFirst == -1 && posSecond >= 0)
                         {
                             // Get position of click
                             posFirst = thisCase;
-                            Operande_une.Text = Convert.ToString(game.Numbers[thisCase]);
                             // Stock for calculation
-                            op1 = game.Numbers[thisCase];
+                            op1 = Convert.ToInt32(txtB_cinq.Text);
+                            // Write in operation to calculate
+                            Operande_une.Text = txtB_cinq.Text;
                         }
                         // Case with both numbers are already selected
                         else
@@ -364,7 +370,7 @@ namespace WindowsWpf
                     Bmoins.Background = Brushes.Gainsboro;
                     Bfoix.Background = Brushes.Gainsboro;
                     Bdivise.Background = Brushes.Gainsboro;
-                    op_ = '+';
+                    operateur = '+';
                     break;
                 case "-":
                     Operateur.Text = txtB_moins.Text;
@@ -372,7 +378,7 @@ namespace WindowsWpf
                     Bmoins.Background = Brushes.LightSlateGray;
                     Bfoix.Background = Brushes.Gainsboro;
                     Bdivise.Background = Brushes.Gainsboro;
-                    op_ = '-';
+                    operateur = '-';
                     break;
                 case "*":
                     Operateur.Text = txtB_multiplier.Text;
@@ -380,7 +386,7 @@ namespace WindowsWpf
                     Bmoins.Background = Brushes.Gainsboro;
                     Bfoix.Background = Brushes.LightSlateGray;
                     Bdivise.Background = Brushes.Gainsboro;
-                    op_ = '*';
+                    operateur = '*';
                     break;
                 case "/":
                     Operateur.Text = txtB_diviser.Text;
@@ -388,60 +394,133 @@ namespace WindowsWpf
                     Bmoins.Background = Brushes.Gainsboro;
                     Bfoix.Background = Brushes.Gainsboro;
                     Bdivise.Background = Brushes.LightSlateGray;
-                    op_ = '/';
+                    operateur = '/';
                     break;
             }
         }
 
         private void calculer_click(object sender, RoutedEventArgs e)
         {
-            isFirst = true;
-
-            int result = game.Operation(op1, op2, op_);
+            int result = game.Operation(op1, op2, operateur);
 
             if (result == -1)
             {
-                // Numéro bouton à passer en couleur de base
-                
+                switch (posFirst)
+                {
+                    case 0:
+                        un.Background = Brushes.Gainsboro;
+                        break;
+                    case 1:
+                        deux.Background = Brushes.Gainsboro;
+                        break;
+                    case 2:
+                        trois.Background = Brushes.Gainsboro;
+                        break;
+                    case 3:
+                        quatre.Background = Brushes.Gainsboro;
+                        break;
+                    case 4:
+                        cinq.Background = Brushes.Gainsboro;
+                        break;
+                }
+                switch (posSecond)
+                {
+                    case 0:
+                        un.Background = Brushes.Gainsboro;
+                        break;
+                    case 1:
+                        deux.Background = Brushes.Gainsboro;
+                        break;
+                    case 2:
+                        trois.Background = Brushes.Gainsboro;
+                        break;
+                    case 3:
+                        quatre.Background = Brushes.Gainsboro;
+                        break;
+                    case 4:
+                        cinq.Background = Brushes.Gainsboro;
+                        break;
+                }
             }
             else
             {
-                // Get position, disable second et get result in first
-                if (un.IsEnabled == false)
+                switch (posFirst)
                 {
-                    un.IsEnabled = true;
-                    txtB_un.Text = Convert.ToString(result);
+                    case 0:
+                        txtB_un.Text = Convert.ToString(result);
+                        un.Background = Brushes.Gainsboro;
+                        break;
+                    case 1:
+                        txtB_deux.Text = Convert.ToString(result);
+                        deux.Background = Brushes.Gainsboro;
+                        break;
+                    case 2:
+                        txtB_trois.Text = Convert.ToString(result);
+                        trois.Background = Brushes.Gainsboro;
+                        break;
+                    case 3:
+                        txtB_quatre.Text = Convert.ToString(result);
+                        quatre.Background = Brushes.Gainsboro;
+                        break;
+                    case 4:
+                        txtB_cinq.Text = Convert.ToString(result);
+                        cinq.Background = Brushes.Gainsboro;
+                        break;
+                }
+                switch (posSecond)
+                {
+                    case 0:
+                        un.IsEnabled = false;
+                        break;
+                    case 1:
+                        deux.IsEnabled = false;
+                        break;
+                    case 2:
+                        trois.IsEnabled = false;
+                        break;
+                    case 3:
+                        quatre.IsEnabled = false;
+                        break;
+                    case 4:
+                        cinq.IsEnabled = false;
+                        break;
+                }
+                nbrOperation++;
+            }
+            // Clean calculation text
+            Operande_une.Text = "";
+            Operande_deux.Text = "";
+            Operateur.Text = "";
+
+            Bplus.Background = Brushes.Gainsboro;
+            Bmoins.Background = Brushes.Gainsboro;
+            Bfoix.Background = Brushes.Gainsboro;
+            Bdivise.Background = Brushes.Gainsboro;
+
+            // Reinitialization of position
+            posFirst = -1;
+            posSecond = -1;
+            operateur = ' ';
+
+            // If all operations are done
+            if (nbrOperation == 4)
+            {
+                game.hasWin(result);
+                session.updateGame(game.Score);
+                // If has not finish the session
+                if (!session.isTerminated())
+                {
+                    Game game = new Game(session.Numbers[session.GamePlayed]);
+                    GamePage gamePage = new GamePage(session, game, player);
+                    Content = gamePage;
+                }
+                // If has finish the session
+                else
+                {
 
                 }
-                else if (deux.IsEnabled == false)
-                {
-                    deux.IsEnabled = true;
-                    txtB_deux.Text = Convert.ToString(result);
-                }
-                else if (trois.IsEnabled == false)
-                {
-                    trois.IsEnabled = true;
-                    txtB_trois.Text = Convert.ToString(result);
-                }
-                else if (quatre.IsEnabled == false)
-                {
-                    quatre.IsEnabled = true;
-                    txtB_quatre.Text = Convert.ToString(result);
-                }
-                else if (cinq.IsEnabled == false)
-                {
-                    cinq.IsEnabled = true;
-                    txtB_cinq.Text = Convert.ToString(result);
-                }
 
-                Operande_une.Text = "";
-                Operande_deux.Text = "";
-                Operateur.Text = "";
             }
         }
-
-        
-
-
     }
 }

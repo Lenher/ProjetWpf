@@ -13,7 +13,7 @@ namespace GameEngine
     {
         private Player player;
         public int TotalScore { get; set; }
-        public int CurrentGame { get; set; } = 1;
+        public int GamePlayed { get; set; } = 0;
         private Game game;
         public List<List<int>> Numbers { get; private set; }
 
@@ -48,6 +48,17 @@ namespace GameEngine
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
+        }
+
+        public void updateGame(int score)
+        {
+            TotalScore += score;
+            GamePlayed += 1;
+        }
+
+        public bool isTerminated()
+        {
+            return (GamePlayed == 5);
         }
     }
 }

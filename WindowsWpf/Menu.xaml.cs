@@ -44,13 +44,13 @@ namespace WindowsWpf
         {
             Session session = new Session(player);
             session.ChooseAFile();
-            if (session.Numbers[0] != null)
+            if (session.Numbers[session.GamePlayed] != null)
             {
-                List<int> bleh = session.Numbers[0];
-                Game game = new Game(bleh);
+                Game game = new Game(session.Numbers[session.GamePlayed]);
                 GamePage gamePage = new GamePage(session, game, player);
                 Content = gamePage;
-            }        }
+            }
+        }
 
         private void Scoring_CLick(object sender, RoutedEventArgs e)
         {

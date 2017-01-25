@@ -33,21 +33,11 @@
             <Label VerticalAlignment="Center" HorizontalAlignment="Center">Matador</Label>
         </Border>
 
-        <Label Grid.Column="5" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">Joueur :</Label>
-        <Label Grid.Column="6" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">Titouan</Label>
+        <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" x:Name="message"></TextBlock>
 
-        <Label Grid.Column="5" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center">Partie :</Label>
-        <Label Grid.Column="6" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center">5/ 5</Label>
+        <Button Grid.Row="5"  Grid.Column="1" Margin="0,10" Background="#5FADD1" Grid.ColumnSpan="2" Click="Menu">Menu</Button>
 
-        <Label Grid.Column="5" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Center">Score :</Label>
-        <Label Grid.Column="6" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Center">41</Label>
-
-        <Label Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20">Félicitation, tu as marqué 41 points</Label>
-        <Label Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="3" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20">en 7'21"</Label>
-
-        <Button Grid.Row="5"  Grid.Column="1" Margin="0,10" Background="#5FADD1" Grid.ColumnSpan="2">Play</Button>
-
-        <Button Grid.Row="5" Grid.Column="4"  Margin="0,10" Background="#5FADD1" Grid.ColumnSpan="2">Scoring Board</Button>
+        <Button Grid.Row="5" Grid.Column="4"  Margin="0,10" Background="#5FADD1" Grid.ColumnSpan="2"  Click="Scoring">Scoring Board</Button>
 
         <Button Grid.Row="6" Grid.Column="2" Margin="0,10" Background="#E83C24" Grid.ColumnSpan="3">Quit</Button>
 

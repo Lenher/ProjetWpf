@@ -24,6 +24,7 @@ namespace GameEngine
             Numbers = new List<List<int>>();
         }
 
+        // Choose file for having numbers for playing
         public void ChooseAFile()
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -50,12 +51,14 @@ namespace GameEngine
             }
         }
 
+        // update total score
         public void updateGame(int score)
         {
             TotalScore += score;
             GamePlayed += 1;
         }
 
+        // true if the fifth game is ended
         public bool isTerminated()
         {
             return (GamePlayed == 5);

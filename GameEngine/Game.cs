@@ -27,6 +27,7 @@ namespace GameEngine
             this.nbrMulti = 0;
         }
 
+        // Return result and increment nbr of operator
         public int Operation(int number1, int number2, char operateur)
         {
             int result = -1;
@@ -59,32 +60,24 @@ namespace GameEngine
             return result;
         }
 
-        public void UpdateScore()
+        // With result given by parameter, update score
+        public void updateScore(int result)
         {
-            if (nbrPlus == 1 && nbrMulti == 1 && nbrMoins == 1 && nbrDivide == 1)
+            if (result == this.ExpectedResult)
             {
-                Score = 13;
-            }
-            else
-            {
-                Score = nbrPlus + nbrMoins * 2 + nbrDivide * 3 + nbrMulti;
+                if (nbrPlus == 1 && nbrMulti == 1 && nbrMoins == 1 && nbrDivide == 1)
+                {
+                    Score = 13;
+                }
+                else
+                {
+                    Score = nbrPlus + nbrMoins * 2 + nbrDivide * 3 + nbrMulti;
+                }
             }
             nbrDivide = 0;
             nbrMoins = 0;
             nbrMulti = 0;
             nbrPlus = 0;
         }
-
-        public bool hasWin(int result)
-        {
-            bool isTerminated = false;
-            if (result == this.ExpectedResult)
-            {
-                UpdateScore();
-                isTerminated = true;
-            }
-            return isTerminated;
-        }
     }
-
 }

@@ -1,18 +1,9 @@
-﻿using GameEngine;
+﻿using BDDWpf;
+using GameEngine;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WindowsWpf
 {
@@ -505,7 +496,7 @@ namespace WindowsWpf
             // If all operations are done
             if (nbrOperation == 4)
             {
-                game.hasWin(result);
+                game.updateScore(result);
                 session.updateGame(game.Score);
                 // If has not finish the session
                 if (!session.isTerminated())
@@ -517,9 +508,11 @@ namespace WindowsWpf
                 // If has finish the session
                 else
                 {
-
+                    EndGamePage endGP = new EndGamePage(player, result);
+                   // UserManager.Open();
+                    //UserManager.Add(player.ToString(), result);
+                    Content = endGP;
                 }
-
             }
         }
     }

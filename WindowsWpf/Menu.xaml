@@ -38,8 +38,5 @@
         <Button Grid.Row="4" Grid.Column="1" Margin="50,10" Background="#E83C24" Grid.ColumnSpan="3"
                 x:Name="Quit" Click="Quit_Click">Quit</Button>
 
-        <TextBox Grid.Row="1" Grid.Column="1" x:Name="test"></TextBox>
-
-
     </Grid>
 </UserControl>

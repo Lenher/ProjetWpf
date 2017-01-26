@@ -50,7 +50,8 @@ namespace WindowsWpf
                 Game game = new Game(bleh);
                 GamePage gamePage = new GamePage(session, game, player);
                 Content = gamePage;
-            }        }
+            }
+        }
 
         private void Scoring_CLick(object sender, RoutedEventArgs e)
         {

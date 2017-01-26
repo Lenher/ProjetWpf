@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BDDWpf;
 
 namespace WindowsWpf
 {
@@ -23,6 +24,22 @@ namespace WindowsWpf
         public ScoringPage()
         {
             InitializeComponent();
+            List<User> scoring = UserManager.GetByScore();
+            UserManager.Open();
+            win_1.Text = Convert.ToString(scoring[0]);
+            win_2.Text = Convert.ToString(scoring[1]);
+            win_3.Text = Convert.ToString(scoring[2]);
+            win_4.Text = Convert.ToString(scoring[3]);
         }
+
+        public void Quit_Click(object sender, RoutedEventArgs e)
+        {
+            Menu menu = new WindowsWpf.Menu();
+            Content = menu;
+        }
+
+
     }
+
+
 }

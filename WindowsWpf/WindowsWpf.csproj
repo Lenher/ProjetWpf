@@ -131,6 +131,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BDDWpf\BDDWpf.csproj">
+      <Project>{359c3011-bff8-4a8d-b85d-dd138a91bc40}</Project>
+      <Name>BDDWpf</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GameEngine\GameEngine.csproj">
       <Project>{9cfb8214-5261-499f-9264-a6d7bbde9487}</Project>
       <Name>GameEngine</Name>

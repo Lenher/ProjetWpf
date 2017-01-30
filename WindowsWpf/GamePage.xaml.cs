@@ -390,6 +390,21 @@ namespace WindowsWpf
             }
         }
 
+        private void solution_click(object sender, RoutedEventArgs e)
+        {
+            Solution.Text = "(((("
+                +Convert.ToString(game.Numbers[0])
+                +"*"
+                +Convert.ToString(game.Numbers[1])
+                +")-"
+                +Convert.ToString(game.Numbers[2])
+                +")+"
+                +Convert.ToString(game.Numbers[3])
+                +")/"
+                +Convert.ToString(game.Numbers[4])
+                +")";
+        }
+
         private void calculer_click(object sender, RoutedEventArgs e)
         {
             int result = game.Operation(op1, op2, operateur);

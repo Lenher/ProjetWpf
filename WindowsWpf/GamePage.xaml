@@ -49,7 +49,11 @@
         <Button Grid.Column="5" Grid.Row="6" VerticalAlignment="Center" Height="30" Margin="20,31,20,-30" Grid.ColumnSpan="2" Background="#5FADD1" Click="calculer_click">Calculer</Button>
 
         <TextBlock Grid.Column="2" Grid.Row="3" Name="test" ></TextBlock>
-        
+
+        <Button Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Height="30" Margin="20,31,20,-30" Grid.ColumnSpan="2" Background="#5FADD1" Click="solution_click">Solution</Button>
+        <TextBlock Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontFamily="GeoSansLight" Height="31" Width="145" Margin="0,0,0,30.556" RenderTransformOrigin="0.5,0.333" FontSize="12" x:Name="Solution" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"></TextBlock>
+
+
         <Button Grid.Column="3" Grid.Row="3" Margin="10">
             <TextBlock Name="result" ></TextBlock>
         </Button>

@@ -26,7 +26,7 @@ namespace WindowsWpf
         {
             InitializeComponent();
             this.player = player;
-            message.Text = "Félicitation "+player.ToString()+", tu as marqué "+Convert.ToString(score)+ "points.";
+            message.Text = "Félicitation "+player.ToString()+", tu as marqué "+Convert.ToString(score)+ "points !";
         }
 
         public void Menu(object sender, RoutedEventArgs e)

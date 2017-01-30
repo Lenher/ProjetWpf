@@ -54,6 +54,8 @@ namespace WindowsWpf
 
         private void Scoring_CLick(object sender, RoutedEventArgs e)
         {
+            ScoringPage scoring = new ScoringPage();
+            Content = scoring;
         }
     }
 }
